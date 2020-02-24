@@ -16,6 +16,14 @@
   font-family: Bungee, sans-serif;
   background-color: #4056A1;
   color: #f4f1ec;
-  padding: 7px 9px;
+  padding: 6px 9px;
   margin-top: 8px;
+}
+
+/* Character counter */
+.counter {
+  font-family: Bungee, sans-serif;
+  color: #545149;
+  float: right;
+  margin-top: 14px;
 }

@@ -1,0 +1,21 @@
+/* Text input field */
+main textarea {
+  width: 100%;
+  height: 45px;
+  border: 0;
+  border-bottom: 4px solid #545149 ;
+  font-weight: 700;
+  resize: none;
+  outline: none;
+  background-color: inherit;
+  color: #545149;
+}
+
+/* Tweet button */
+main input {
+  font-family: Bungee, sans-serif;
+  background-color: #4056A1;
+  color: #f4f1ec;
+  padding: 7px 9px;
+  margin-top: 8px;
+}

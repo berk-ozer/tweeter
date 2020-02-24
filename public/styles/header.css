@@ -1,0 +1,27 @@
+header {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  top: 120px;
+  background-color: rgba(0, 121, 140, 0.678);
+  background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
+}
+
+/* Avatar image */
+header img {
+  display: inline-block;
+  position: relative;
+  left: 42vw;
+  top: 60px
+}
+
+/* Name */
+header h2 {
+  display: inline-block;
+  width: 256px;
+  text-align: center;
+  position: relative;
+  left: 42vw;
+  top: 15px;
+  color: azure;
+}

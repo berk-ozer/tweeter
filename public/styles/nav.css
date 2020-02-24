@@ -1,0 +1,36 @@
+nav {
+  position: fixed;
+  top: 0;
+  height: 120px;
+  width: 100vw;
+  z-index: 99;
+  padding: 1.5em;
+  background-color: #4056A1;
+  color: #ffffff;
+}
+
+/* Tweeter text */
+nav span:nth-child(1) {
+  font-family: Bungee, sans-serif;
+  float: left;
+}
+
+/* Write a new tweet text */
+nav span:nth-child(2) {
+  position: absolute;
+  right: 1.5em;
+  top: 1.5em;
+}
+
+/* Arrow icon */
+nav i {
+  position: absolute;
+  right: 115px;
+  bottom: 1.1em;
+  color: #F26419;
+}
+
+nav i:hover {
+  color: rgba(242, 101, 25, 0.568);
+  transition: color 0.5s ease;
+}

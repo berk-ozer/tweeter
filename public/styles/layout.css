@@ -14,6 +14,10 @@ html {
  * Global layout stuff
  */
 
+ * {
+   font-family: Source Sans Pro, sans-serif;
+ }
+
 body {
   color: #545149;
   background-color: #f4f1ec;
@@ -23,3 +27,7 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+ nav span{
+   font-family: Bungee, sans-serif;
+ }

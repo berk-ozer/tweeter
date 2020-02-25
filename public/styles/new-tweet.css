@@ -28,3 +28,8 @@
   float: right;
   margin-top: 14px;
 }
+
+/* Red text for when counter goes below zero */
+.red-text {
+  color: #DB504A;
+}

@@ -6,7 +6,7 @@ $(document).ready(() => {
 
   // when text is inputted (keyup)
   $textArea.on('keyup', function(e) {
-   console.log($(this).val());
+   console.log(140 - $(this).val().length);
   })
 
 })  

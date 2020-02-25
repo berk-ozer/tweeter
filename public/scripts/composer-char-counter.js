@@ -4,7 +4,7 @@ $(document).ready(() => {
   const $textArea = $('.new-tweet textarea');
 
   // updates the character counter every time text is inputted
-  $textArea.on('keyup', function(e) {
+  $textArea.on('keyup', function() {
 
     const $charCounter = $(this).siblings('.counter');
     const remainingCharCount = 140 - $(this).val().length;
@@ -18,6 +18,6 @@ $(document).ready(() => {
     } else {
       $charCounter.removeClass('over-char-limit');
     }
-  })
+  });
 
-})  
+});

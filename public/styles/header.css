@@ -1,4 +1,5 @@
-header {
+/* Header with avatar image and user name */
+.profile {
   width: 100%;
   height: 400px;
   position: relative;
@@ -8,7 +9,7 @@ header {
 }
 
 /* Avatar image */
-header img {
+.profile img {
   display: inline-block;
   position: relative;
   left: 42vw;
@@ -16,7 +17,7 @@ header img {
 }
 
 /* Name */
-header h2 {
+.profile h2 {
   display: inline-block;
   width: 256px;
   text-align: center;

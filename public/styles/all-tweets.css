@@ -1,34 +1,34 @@
 /* A single tweet */
-.all-tweets article {
+.tweet {
   border: 4px solid #545149;
   margin: 80px 0 40px;
 }
 
 /* When hover over tweet, add shadow */
-.all-tweets article:hover {
+.tweet:hover {
   box-shadow: 7px 6px #54514956;
 }
 
 /* When hover over tweer, show username (handle) */
-.all-tweets article:hover header span:nth-of-type(2) {
+.tweet:hover header span:nth-of-type(2) {
   display: inline;
 }
 
 /* User profile image */
-.all-tweets img {
+.tweet img {
   width: 60px;
   margin: 15px;
 }
 
 /* Name */
-.all-tweets header span:nth-of-type(1) {
+.tweet header span:nth-of-type(1) {
   position: relative;
   bottom: 1.5em;
   font-weight: 300;
 }
 
 /* Username (handle) */
-.all-tweets header span:nth-of-type(2) {
+.tweet header span:nth-of-type(2) {
   position: absolute;
   bottom: 1.7em;
   right: 7%;
@@ -38,7 +38,7 @@
 }
 
 /* Tweet text */
-.all-tweets p {
+.tweet p {
   margin: 0 0.4em;
   padding: 0.5em 1em 1.5em;
   border-bottom: 4px solid #545149;
@@ -46,18 +46,18 @@
 }
 
 /* Footer with timestamp and icons */
-.all-tweets footer {
+.tweet footer {
   font-size: 0.7em;
   margin: 0.8em 3.5%;
 }
 
 /* All icons in footer */
-.all-tweets footer span {
+.tweet footer span {
   float: right;
   color: #4056A1;
 }
 
 /* Individual icons in footer */
-.all-tweets footer i {
+.tweet footer i {
   padding: 0 4px;
 }

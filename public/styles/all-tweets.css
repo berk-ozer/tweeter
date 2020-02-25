@@ -4,9 +4,14 @@
   margin: 80px 0 40px;
 }
 
-/* When hover over tweet */
+/* When hover over tweet, add shadow */
 .all-tweets article:hover {
   box-shadow: 7px 6px #54514956;
+}
+
+/* When hover over tweer, show username (handle) */
+.all-tweets article:hover header span:nth-of-type(2) {
+  display: inline;
 }
 
 /* User profile image */
@@ -29,6 +34,7 @@
   right: 7%;
   color: #54514956;
   font-weight: 400;
+  display: none;
 }
 
 /* Tweet text */

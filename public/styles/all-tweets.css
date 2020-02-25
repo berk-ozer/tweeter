@@ -33,3 +33,20 @@
   border-bottom: 4px solid #545149;
   font-weight: 400;
 }
+
+/* Footer with timestamp and icons */
+.all-tweets footer {
+  font-size: 0.7em;
+  margin: 0.8em 3.5%;
+}
+
+/* All icons in footer */
+.all-tweets footer span {
+  float: right;
+  color: #4056A1;
+}
+
+/* Individual icons in footer */
+.all-tweets footer i {
+  padding: 0 4px;
+}

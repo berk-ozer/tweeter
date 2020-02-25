@@ -28,7 +28,7 @@
     <!-- App JS -->
     <script type="text/javascript" src="scripts/client.js"></script>
     <script type="text/javascript" src="scripts/composer-char-counter.js"></script>
-    
+
   </head>
 
 
@@ -42,8 +42,8 @@
       <a href="#"><i class="fas fa-angle-double-down"></i></a>
     </nav>
 
-    <!-- Header -->
-    <header>
+    <!-- Header with user avatar and name-->
+    <header class="profile">
       <div>
           <img src="images/profile-hex.png"> 
       </div>
@@ -51,10 +51,12 @@
       <div>
           <h2>Crystal Bella</h2>
       </div>
-  </header>
+    </header>
 
-    <!-- Page-specific (main) content here -->
+    <!-- Page-specific (main) content -->
     <main class="container">
+
+      <!-- Compose tweet section -->
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form method="POST" action="/tweets/">
@@ -63,6 +65,22 @@
           <span class="counter">140</span>
         </form>
       </section>
+
+      <!-- All tweets timeline section -->
+      <article class="all-tweets">
+        <header>
+          <img src="images/profile-hex.png" alt="user-avatar">
+          Newton
+          @SirIsaac
+        </header>
+        If I have seen further it is by standing on the shoulders of giants
+        <footer>
+          10 days ago
+          <i class="fas fa-flag"></i>
+          <i class="fas fa-retweet"></i>
+          <i class="fas fa-heart"></i>
+        </footer>
+      </article>
     </main>
 
   </body>

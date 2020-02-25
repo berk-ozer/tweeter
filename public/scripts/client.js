@@ -20,6 +20,9 @@ $(document).ready(() => {
     $header.append($('<span>').text(tweetData.user.handle));
 
     $tweet.append($header);
+
+    // Creating the tweet text and appending it to $tweet
+    $header.append($('<p>').text(tweetData.content.text)) ;
   }
 
   // TESTING

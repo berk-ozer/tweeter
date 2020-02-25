@@ -1,8 +1,10 @@
-.all-tweets {
+/* A single tweet */
+.all-tweets article {
   border: 4px solid #545149;
   margin: 80px 0 40px;
 }
 
+/* User profile image */
 .all-tweets img {
   width: 60px;
   margin: 15px;

@@ -24,3 +24,10 @@
   color: #54514956;
   font-weight: 700;
 }
+
+/* Tweet text */
+.all-tweets p {
+  margin: 0 0.4em;
+  padding: 0.5em 1em 1.5em;
+  border-bottom: 4px solid #545149;
+}

@@ -29,7 +29,7 @@
   margin-top: 14px;
 }
 
-/* Red text for when counter goes below zero */
-.red-text {
+/* For when character counter goes over the character limit */
+.over-char-limit {
   color: #DB504A;
 }

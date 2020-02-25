@@ -14,6 +14,7 @@
 .all-tweets header span:nth-of-type(1) {
   position: relative;
   bottom: 1.5em;
+  font-weight: 300;
 }
 
 /* Username (handle) */
@@ -22,7 +23,7 @@
   bottom: 1.7em;
   right: 7%;
   color: #54514956;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 /* Tweet text */
@@ -30,4 +31,5 @@
   margin: 0 0.4em;
   padding: 0.5em 1em 1.5em;
   border-bottom: 4px solid #545149;
+  font-weight: 400;
 }

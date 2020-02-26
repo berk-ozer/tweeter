@@ -49,11 +49,22 @@ $(document).ready(() => {
   $('.new-tweet form').submit(function(event) {
     event.preventDefault();
 
-    // serialize the data from form input and send to server
-    $.ajax('/tweets', {
-      data: $(this).serialize(),
-      method: 'POST'
-    });
+    const inputText = $(this).children('textarea').val();
+
+    // check if input is valid
+    if (!inputText) {
+      alert('You cannot tweet an empty text!');
+
+    } else if (inputText.length > 140) {
+      alert('Please make sure your tweet is under 140 characters!');
+    
+    } else { 
+      // input is valid, serialize the data and send to server
+      $.ajax('/tweets', {
+        data: $(this).serialize(),
+        method: 'POST'
+      });
+    }
   })
 
   // GET tweets from the server and render them on the page

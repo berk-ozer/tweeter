@@ -4,8 +4,12 @@ $(document).ready(() => {
   // Takes in a tweet object, returns an <article> element containing the tweet
   const createTweetElement = tweetData => {
 
+    // The tweet article element which will be returned in the end
     const $tweet = $('<article>').addClass('tweet');
 
+    const daysSinceTweet = (Date.now() - tweetData.created_at) / 86400000;
+
+    // The tweet element's inner html
     const htmlContent = `
       <header>
         <img src=${tweetData.user.avatars} alt="${tweetData.user.handle}-avatar">
@@ -14,7 +18,7 @@ $(document).ready(() => {
       </header>
       <p>${tweetData.content.text}</p>
       <footer>
-        10 days ago
+        ${Math.round(daysSinceTweet)} days ago
         <span>
           <i class="fas fa-flag"></i>
           <i class="fas fa-retweet"></i>
@@ -22,6 +26,8 @@ $(document).ready(() => {
         </span>
       </footer>
     `
+
+    // Add the inner html to tweet and return it
     return $tweet.html(htmlContent);
     
     // // The tweet article element which will be returned in the end

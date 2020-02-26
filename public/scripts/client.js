@@ -56,6 +56,17 @@ $(document).ready(() => {
     });
   })
 
+  // GET tweets from the server and render them on the page
+  const loadTweets = () => {
+    $.ajax('/tweets', {
+      method: 'GET',
+      dataType: 'JSON'
+    })
+      .then(tweets => renderTweets(tweets));
+  };
+
+  loadTweets();
+
   // TESTING RENDER TWEETS
   const data = [
     {

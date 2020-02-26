@@ -62,7 +62,13 @@
         <h2>Compose Tweet</h2>
         <form method="POST" action="/tweets/">
           <textarea name="text" placeholder="What are you humming about?"></textarea>
-          <h4><i class="fas fa-exclamation-circle"></i>Error message goes here</h4>
+
+          <!-- Error message, hidden by default -->
+          <h4>
+            <i class="fas fa-exclamation-circle"></i>
+            <span class='tweet-error'>Error message goes here</span>
+          </h4>
+
           <input type="submit" value="Tweet">
           <span class="counter">140</span>
         </form>

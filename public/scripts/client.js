@@ -46,8 +46,14 @@ const renderTweets = tweetsDatabase => {
 $(document).ready(() => {
 
   // handling new tweet form submit
-  $('.new-tweet form').submit(event => {
+  $('.new-tweet form').submit(function(event) {
     event.preventDefault();
+
+    // serialize the data from form input and send to server
+    $.ajax('/tweets', {
+      data: $(this).serialize(),
+      method: 'POST'
+    });
   })
 
   // TESTING RENDER TWEETS

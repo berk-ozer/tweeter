@@ -21,6 +21,16 @@
   margin-top: 8px;
 }
 
+/* Tweet button hovering*/
+.new-tweet input:hover {
+  background-color: rgb(46, 70, 150);
+}
+
+/* Tweet button when pressed*/
+.new-tweet input:active {
+  border: 1.8px solid rgb(107, 124, 180);
+}
+
 /* Character counter */
 .counter {
   font-family: Bungee, sans-serif;

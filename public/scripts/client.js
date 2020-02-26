@@ -54,6 +54,12 @@ const renderTweets = tweetsDatabase => {
 
 $(document).ready(() => {
 
+  // shows/hides new tweet section when clicked the arrow icon on navbar
+  $('nav i').on('click', () => {
+    $('.new-tweet').slideToggle();
+    $('.new-tweet textarea').focus();
+  });
+
   // handling new tweet form submit
   $('.new-tweet form').submit(function(event) {
     event.preventDefault();

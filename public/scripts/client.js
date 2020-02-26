@@ -28,7 +28,7 @@ $(document).ready(() => {
     const $footer = $('<footer>');
 
     const daysSinceTweet = (Date.now() - tweetData.created_at) / 86400000;
-    $footer.text(`${daysSinceTweet} days ago`);
+    $footer.text(`${Math.round(daysSinceTweet)} days ago`);
 
     const $iconsSpan = $('<span>');
     $iconsSpan.append($('<i>').addClass('fas fa-flag'));

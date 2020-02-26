@@ -43,3 +43,19 @@
 .over-char-limit {
   color: #DB504A;
 }
+
+/* Error message (default hidden) */
+.new-tweet h4 {
+  margin: 0.5em 0;
+  font-size: 0.9em;
+  font-weight: 400;
+  color: #D8000C;
+  background-color: #FFD2D2;
+  border-radius: 5px;
+  display: none;
+}
+
+/* Error icon */
+.new-tweet i {
+  padding: 3px 10px;
+}

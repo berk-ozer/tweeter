@@ -4,7 +4,7 @@ $(document).ready(() => {
   // Takes in a tweet object, returns an <article> element containing the tweet
   const createTweetElement = tweetData => {
     
-    // The tweet article which will be returned in the end
+    // The tweet article element which will be returned in the end
     const $tweet = $('<article>').addClass('tweet');
 
     // Creating the header and appending it to $tweet
@@ -23,6 +23,24 @@ $(document).ready(() => {
 
     // Creating the tweet text and appending it to $tweet
     $header.append($('<p>').text(tweetData.content.text)) ;
+
+    // Creating the footer and appending it to $tweet
+    const $footer = $('<footer>');
+
+    const daysSinceTweet = (Date.now() - tweetData.created_at) / 86400000;
+    $footer.text(`${daysSinceTweet} days ago`);
+
+    const $iconsSpan = $('<span>');
+    $iconsSpan.append($('<i>').addClass('fas fa-flag'));
+    $iconsSpan.append($('<i>').addClass('fas fa-retweet'));
+    $iconsSpan.append($('<i>').addClass('fas fa-heart'));
+
+    $footer.append($iconsSpan);
+
+    $tweet.append($footer);
+
+    // Returning the tweet article
+    return $tweet;
   }
 
   // TESTING

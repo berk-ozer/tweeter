@@ -67,7 +67,8 @@ $(document).ready(() => {
         method: 'POST'
       })
         // load tweets from the server and display on page
-        .then(loadTweets());
+        .then(loadTweets())
+        .catch(error => console.error(error));
     }
   })
 
@@ -77,7 +78,8 @@ $(document).ready(() => {
       method: 'GET',
       dataType: 'JSON'
     })
-      .then(tweets => renderTweets(tweets));
+      .then(tweets => renderTweets(tweets))
+      .catch(error => console.error(error));
   };
 
   // TESTING

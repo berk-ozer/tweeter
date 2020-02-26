@@ -3,44 +3,63 @@ $(document).ready(() => {
   
   // Takes in a tweet object, returns an <article> element containing the tweet
   const createTweetElement = tweetData => {
+
+    const tweet = `
+    <article class="tweet">
+      <header>
+        <img src="images/profile-hex.png" alt="user-avatar">
+        <span>Newton</span>
+        <span>@SirIsaac</span>
+      </header>
+      <p>If I have seen further it is by standing on the shoulders of giants</p>
+      <footer>
+        10 days ago
+        <span>
+          <i class="fas fa-flag"></i>
+          <i class="fas fa-retweet"></i>
+          <i class="fas fa-heart"></i>
+        </span>
+      </footer>
+    </article>
+    `
     
-    // The tweet article element which will be returned in the end
-    const $tweet = $('<article>').addClass('tweet');
+    // // The tweet article element which will be returned in the end
+    // const $tweet = $('<article>').addClass('tweet');
 
-    // Creating the header and appending it to $tweet
-    const $header = $('<header>');
+    // // Creating the header and appending it to $tweet
+    // const $header = $('<header>');
 
-    const $img = $('<img>').attr({
-      src: tweetData.user.avatars,
-      alt: `${tweetData.user.handle}-avatar`
-    });
+    // const $img = $('<img>').attr({
+    //   src: tweetData.user.avatars,
+    //   alt: `${tweetData.user.handle}-avatar`
+    // });
 
-    $header.append($img);
-    $header.append($('<span>').text(tweetData.user.name));
-    $header.append($('<span>').text(tweetData.user.handle));
+    // $header.append($img);
+    // $header.append($('<span>').text(tweetData.user.name));
+    // $header.append($('<span>').text(tweetData.user.handle));
 
-    $tweet.append($header);
+    // $tweet.append($header);
 
-    // Creating the tweet text and appending it to $tweet
-    $header.append($('<p>').text(tweetData.content.text)) ;
+    // // Creating the tweet text and appending it to $tweet
+    // $header.append($('<p>').text(tweetData.content.text)) ;
 
-    // Creating the footer and appending it to $tweet
-    const $footer = $('<footer>');
+    // // Creating the footer and appending it to $tweet
+    // const $footer = $('<footer>');
 
-    const daysSinceTweet = (Date.now() - tweetData.created_at) / 86400000;
-    $footer.text(`${Math.round(daysSinceTweet)} days ago`);
+    // const daysSinceTweet = (Date.now() - tweetData.created_at) / 86400000;
+    // $footer.text(`${Math.round(daysSinceTweet)} days ago`);
 
-    const $iconsSpan = $('<span>');
-    $iconsSpan.append($('<i>').addClass('fas fa-flag'));
-    $iconsSpan.append($('<i>').addClass('fas fa-retweet'));
-    $iconsSpan.append($('<i>').addClass('fas fa-heart'));
+    // const $iconsSpan = $('<span>');
+    // $iconsSpan.append($('<i>').addClass('fas fa-flag'));
+    // $iconsSpan.append($('<i>').addClass('fas fa-retweet'));
+    // $iconsSpan.append($('<i>').addClass('fas fa-heart'));
 
-    $footer.append($iconsSpan);
+    // $footer.append($iconsSpan);
 
-    $tweet.append($footer);
+    // $tweet.append($footer);
 
-    // Returning the tweet article
-    return $tweet;
+    // // Returning the tweet article
+    // return $tweet;
   }
 
   // TESTING

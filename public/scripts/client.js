@@ -32,8 +32,10 @@ const createTweetElement = tweetData => {
   return $tweet.html(htmlContent);
 };
 
-// Takes in an array of tweet objects, turns them into html elements, and appends them to #tweets-container
+// Takes in an array of tweet objects, turns them into html elements (using another function), and appends them to #tweets-container
 const renderTweets = tweetsDatabase => {
+  $('#tweets-container').empty();
+
   for (const tweet of tweetsDatabase) {
     $('#tweets-container').append(createTweetElement(tweet));
   }
@@ -63,7 +65,9 @@ $(document).ready(() => {
       $.ajax('/tweets', {
         data: $(this).serialize(),
         method: 'POST'
-      });
+      })
+        // load tweets from the server and display on page
+        .then(loadTweets());
     }
   })
 

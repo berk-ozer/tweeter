@@ -65,13 +65,19 @@ $(document).ready(() => {
     event.preventDefault();
 
     const inputText = $(this).children('textarea').val();
+    const $errorMessage = $(this).children('h4');
 
-    // check if input is valid
+    // hide error message in case it's in display
+    $errorMessage.slideUp(50);
+
+    // check if input is valid, show error message if it's not
     if (!inputText) {
-      alert('You cannot tweet an empty text!');
-
+      $('.tweet-error').text('You cannot tweet an empty text!');
+      $errorMessage.slideDown(300);
+      
     } else if (inputText.length > 140) {
-      alert('Please make sure your tweet is under 140 characters!');
+      $('.tweet-error').text('Please make sure your tweet is under 140 characters!');
+      $errorMessage.slideDown(300);
     
     } else { 
       // input is valid, serialize the data and send to server

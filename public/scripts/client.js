@@ -75,13 +75,13 @@ $(document).ready(() => {
     
     } else { 
       // input is valid, serialize the data and send to server
+      // on success, load tweets from the server and display on page
       $.ajax('/tweets', {
         data: $(this).serialize(),
-        method: 'POST'
+        method: 'POST',
+        success: () => loadTweets(),
+        error: (data, text, error) => console.error(error)
       })
-        // load tweets from the server and display on page
-        .then(loadTweets())
-        .catch(error => console.error(error));
     }
   })
 
@@ -89,10 +89,10 @@ $(document).ready(() => {
   const loadTweets = () => {
     $.ajax('/tweets', {
       method: 'GET',
-      dataType: 'JSON'
+      dataType: 'JSON',
+      success: tweets => renderTweets(tweets),
+      error: (data, text, error) => console.error(error)
     })
-      .then(tweets => renderTweets(tweets))
-      .catch(error => console.error(error));
   };
 
   // TESTING

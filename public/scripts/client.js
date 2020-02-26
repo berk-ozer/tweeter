@@ -2,6 +2,13 @@
 // FUNCTIONS
 // 
 
+// Escapes unsafe characters and returns safe html. To prevent XSS
+const escape = str => {
+  const div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
+
 // Takes in a tweet object, returns an <article> element containing the tweet
 const createTweetElement = tweetData => {
 
@@ -13,11 +20,11 @@ const createTweetElement = tweetData => {
   // The tweet element's inner html
   const htmlContent = `
     <header>
-      <img src=${tweetData.user.avatars} alt="${tweetData.user.handle}-avatar">
-      <span>${tweetData.user.name}</span>
-      <span>${tweetData.user.handle}</span>
+      <img src=${escape(tweetData.user.avatars)} alt="${escape(tweetData.user.handle)}-avatar">
+      <span>${escape(tweetData.user.name)}</span>
+      <span>${escape(tweetData.user.handle)}</span>
     </header>
-    <p>${tweetData.content.text}</p>
+    <p>${escape(tweetData.content.text)}</p>
     <footer>
       ${Math.round(daysSinceTweet)} days ago
       <span>

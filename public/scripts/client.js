@@ -29,7 +29,14 @@ $(document).ready(() => {
 
     // Add the inner html to tweet and return it
     return $tweet.html(htmlContent);
-  }
+  };
+
+  // Takes in an array of tweet objects, turns them into html elements, and appends them to #tweets-container
+  const renderTweets = tweetsDatabase => {
+    for (const tweet of tweetsDatabase) {
+      $('#tweets-container').append(createTweetElement(tweet));
+    }
+  };
 
   // TESTING
   const data = [

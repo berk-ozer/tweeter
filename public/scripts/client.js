@@ -4,14 +4,15 @@ $(document).ready(() => {
   // Takes in a tweet object, returns an <article> element containing the tweet
   const createTweetElement = tweetData => {
 
-    const tweet = `
-    <article class="tweet">
+    const $tweet = $('<article>').addClass('tweet');
+
+    const htmlContent = `
       <header>
-        <img src="images/profile-hex.png" alt="user-avatar">
-        <span>Newton</span>
-        <span>@SirIsaac</span>
+        <img src=${tweetData.user.avatars} alt="${tweetData.user.handle}-avatar">
+        <span>${tweetData.user.name}</span>
+        <span>${tweetData.user.handle}</span>
       </header>
-      <p>If I have seen further it is by standing on the shoulders of giants</p>
+      <p>${tweetData.content.text}</p>
       <footer>
         10 days ago
         <span>
@@ -20,8 +21,8 @@ $(document).ready(() => {
           <i class="fas fa-heart"></i>
         </span>
       </footer>
-    </article>
     `
+    return $tweet.html(htmlContent);
     
     // // The tweet article element which will be returned in the end
     // const $tweet = $('<article>').addClass('tweet');

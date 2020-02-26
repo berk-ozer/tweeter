@@ -43,10 +43,14 @@ const renderTweets = tweetsDatabase => {
 // WHEN DOM IS READY
 // 
 
-// When DOM is loaded, call the functions
 $(document).ready(() => {
 
-  // TESTING
+  // handling new tweet form submit
+  $('.new-tweet form').submit(event => {
+    event.preventDefault();
+  })
+
+  // TESTING RENDER TWEETS
   const data = [
     {
       "user": {

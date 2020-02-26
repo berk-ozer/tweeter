@@ -29,44 +29,6 @@ $(document).ready(() => {
 
     // Add the inner html to tweet and return it
     return $tweet.html(htmlContent);
-    
-    // // The tweet article element which will be returned in the end
-    // const $tweet = $('<article>').addClass('tweet');
-
-    // // Creating the header and appending it to $tweet
-    // const $header = $('<header>');
-
-    // const $img = $('<img>').attr({
-    //   src: tweetData.user.avatars,
-    //   alt: `${tweetData.user.handle}-avatar`
-    // });
-
-    // $header.append($img);
-    // $header.append($('<span>').text(tweetData.user.name));
-    // $header.append($('<span>').text(tweetData.user.handle));
-
-    // $tweet.append($header);
-
-    // // Creating the tweet text and appending it to $tweet
-    // $header.append($('<p>').text(tweetData.content.text)) ;
-
-    // // Creating the footer and appending it to $tweet
-    // const $footer = $('<footer>');
-
-    // const daysSinceTweet = (Date.now() - tweetData.created_at) / 86400000;
-    // $footer.text(`${Math.round(daysSinceTweet)} days ago`);
-
-    // const $iconsSpan = $('<span>');
-    // $iconsSpan.append($('<i>').addClass('fas fa-flag'));
-    // $iconsSpan.append($('<i>').addClass('fas fa-retweet'));
-    // $iconsSpan.append($('<i>').addClass('fas fa-heart'));
-
-    // $footer.append($iconsSpan);
-
-    // $tweet.append($footer);
-
-    // // Returning the tweet article
-    // return $tweet;
   }
 
   // TESTING

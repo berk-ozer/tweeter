@@ -9,7 +9,7 @@
   box-shadow: 7px 6px #54514956;
 }
 
-/* When hover over tweer, show username (handle) */
+/* When hover over tweet, show username (handle) */
 .tweet:hover header span:nth-of-type(2) {
   display: inline;
 }
@@ -22,23 +22,21 @@
 
 /* Tweet header */
 .tweet header {
-  position: relative;
+  display: flex;
+  align-items: center;
 }
 
 /* Name */
 .tweet header span:nth-of-type(1) {
-  position: relative;
-  bottom: 1.5em;
   font-weight: 300;
 }
 
 /* Username (handle) */
 .tweet header span:nth-of-type(2) {
-  position: absolute;
-  bottom: 1.6em;
-  right: 2%;
   color: #54514956;
   font-weight: 400;
+  margin-left: auto;
+  margin-right: 2em;
   display: none;
 }
 

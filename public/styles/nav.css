@@ -29,6 +29,7 @@ nav i {
   right: 115px;
   bottom: 1.1em;
   color: #F26419;
+  transition: color 0.5s ease;
 }
 
 nav i:hover {

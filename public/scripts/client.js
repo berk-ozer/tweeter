@@ -72,7 +72,7 @@ $(document).ready(() => {
     const inputText = $textArea.val();
 
     // hide error message in case it's in display
-    $errorMessage.slideUp(50);
+    $errorMessage.hide();
 
     // check if input is valid, show error message if it's not
     if (!inputText) {
@@ -92,7 +92,7 @@ $(document).ready(() => {
         success: () => loadTweets(),
         error: (data, text, error) => console.error(error)
       })
-      
+
       // clear textarea
       $textArea.val('');
     }

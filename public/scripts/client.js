@@ -1,13 +1,13 @@
-// 
+//
 // FUNCTIONS
-// 
+//
 
 // Escapes unsafe characters and returns safe html. To prevent XSS
 const escape = str => {
   const div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
-}
+};
 
 // Takes in a tweet object, returns an <article> element containing the tweet
 const createTweetElement = tweetData => {
@@ -33,7 +33,7 @@ const createTweetElement = tweetData => {
         <i class="fas fa-heart"></i>
       </span>
     </footer>
-  `
+  `;
 
   // Add the inner html to tweet and return it
   return $tweet.html(htmlContent);
@@ -51,9 +51,9 @@ const renderTweets = tweetsDatabase => {
   }
 };
 
-// 
+//
 // WHEN DOM IS READY
-// 
+//
 
 $(document).ready(() => {
 
@@ -83,7 +83,7 @@ $(document).ready(() => {
       $('.tweet-error').text('Please make sure your tweet is under 140 characters!');
       $errorMessage.slideDown(300);
     
-    } else { 
+    } else {
       // input is valid, serialize the data and send to server
       // on success, load tweets from the server and display on page
       $.ajax('/tweets', {
@@ -93,11 +93,11 @@ $(document).ready(() => {
           loadTweets();
           $textArea.val(''); // clear textarea
           $('.counter').text('140'); // reset counter to 140
-        }, 
+        },
         error: (data, text, error) => console.error(error)
-      })
+      });
     }
-  })
+  });
 
   // GET tweets from the server and render them on the page
   const loadTweets = () => {
@@ -106,9 +106,9 @@ $(document).ready(() => {
       dataType: 'JSON',
       success: tweets => renderTweets(tweets),
       error: (data, text, error) => console.error(error)
-    })
+    });
   };
 
   // TESTING
   loadTweets();
-})
+});

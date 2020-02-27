@@ -88,4 +88,9 @@ body {
     .new-tweet form {
       margin: 0 0 60px;
     }
+
+    /* A single tweet */
+    .tweet {
+      margin-top: 0;
+    }
   }

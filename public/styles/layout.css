@@ -33,3 +33,28 @@ body {
    width: 90%;
    padding-top: 12px;
  }
+
+ /* Scroll up button (hidden until scroll down) */
+ .scroll-up {
+   height: 80px;
+   width: 80px;
+   border-radius: 40px;
+   background-color: rgba(242, 101, 25, 0.836);
+   transition: background-color 0.3s ease;
+   position: fixed;
+   bottom: 4vh;
+   right: 2vw;
+   outline: none;
+   display: none;
+ }
+
+ .scroll-up:hover {
+   background-color:  rgba(242, 101, 25, 0.952);;
+   transition: background-color 0.3s ease;
+ }
+
+ /* Arrow icon in scroll up button */
+ .scroll-up i {
+   font-size: 1.5em;
+   color: white;
+ }

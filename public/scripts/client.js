@@ -67,8 +67,9 @@ $(document).ready(() => {
   $('.new-tweet form').submit(function(event) {
     event.preventDefault();
 
-    const inputText = $(this).children('textarea').val();
     const $errorMessage = $(this).children('h4');
+    const $textArea = $(this).children('textarea');
+    const inputText = $textArea.val();
 
     // hide error message in case it's in display
     $errorMessage.slideUp(50);
@@ -92,6 +93,9 @@ $(document).ready(() => {
         error: (data, text, error) => console.error(error)
       })
     }
+
+    // clear textarea
+    $textArea.val('');
   })
 
   // GET tweets from the server and render them on the page

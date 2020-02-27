@@ -28,11 +28,13 @@ nav i {
   position: absolute;
   right: 48%;
   bottom: -1.5em;
-  color: #F26419;
-  transition: color 0.5s ease;
+  color: rgba(242, 101, 25, 0.849);
+  transition: all 0.5s ease;
 }
 
 nav i:hover {
-  color: rgba(242, 101, 25, 0.568);
-  transition: color 0.5s ease;
+  color: rgb(242, 101, 25);
+  font-size: 1.3em;
+  bottom: -1.3em;
+  transition: all 0.5s ease;
 }

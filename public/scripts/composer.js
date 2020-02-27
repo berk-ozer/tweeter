@@ -20,5 +20,7 @@ $(document).ready(() => {
   // when pressed scroll-up button, scroll up and focus on new-tweet form
   $('.scroll-up').click(() => {
     $(window).scrollTop(0);
+    $('.new-tweet').slideDown();
+    $('.new-tweet textarea').focus();
   })
 })

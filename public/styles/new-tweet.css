@@ -33,7 +33,7 @@
 
 /* Tweet button when pressed*/
 .new-tweet input:active {
-  border: 1.8px solid rgb(107, 124, 180);
+  background-color: rgb(60, 76, 122);
 }
 
 /* Character counter */

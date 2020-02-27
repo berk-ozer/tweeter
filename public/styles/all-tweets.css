@@ -9,11 +9,6 @@
   box-shadow: 7px 6px #54514956;
 }
 
-/* When hover over tweet, show username (handle) */
-.tweet:hover header span:nth-of-type(2) {
-  display: inline;
-}
-
 /* When hover over tweet, show icons in footer */
 .tweet:hover footer span {
   display: inline;
@@ -42,7 +37,6 @@
   font-weight: 400;
   margin-left: auto;
   margin-right: 2em;
-  display: none;
 }
 
 /* Tweet text */

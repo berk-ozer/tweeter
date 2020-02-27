@@ -17,7 +17,7 @@ $(document).ready(() => {
     }
   })
 
-  // when pressed scroll-up button, scroll up and focus on new-tweet form
+  // when pressed scroll-up button, scroll to the top and slide down new-tweet form with textarea enabled
   $('.scroll-up').click(() => {
     $(window).scrollTop(0);
     $('.new-tweet').slideDown();

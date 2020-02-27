@@ -62,21 +62,29 @@ body {
 
 
  /* 
-  * Responsive layout (mobile/tablet by default styling)
+  * Responsive layout 
+  * (mobile/tablet by default styling)
   */
 
   /* For desktops/laptops */
   @media only screen and (min-width: 1024px) {
 
+    /* Header with avatar image and user name */
     .profile {
       width: 28%;
       margin: 10vh 6% 0;
       float: left;
     }
 
+    /* Main content container */
     main {
       width: 50%;
       margin: 10vh 5% 0;
       float: right;
+    }
+
+    /* Tweet form */
+    .new-tweet form {
+      margin: 0 0 60px;
     }
   }

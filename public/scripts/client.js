@@ -92,10 +92,10 @@ $(document).ready(() => {
         success: () => loadTweets(),
         error: (data, text, error) => console.error(error)
       })
+      
+      // clear textarea
+      $textArea.val('');
     }
-
-    // clear textarea
-    $textArea.val('');
   })
 
   // GET tweets from the server and render them on the page

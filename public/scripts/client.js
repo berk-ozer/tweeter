@@ -39,10 +39,13 @@ const createTweetElement = tweetData => {
   return $tweet.html(htmlContent);
 };
 
-// Takes in an array of tweet objects, turns them into html elements (using another function), and appends them to #tweets-container
+// adds all tweets to #tweets-container
 const renderTweets = tweetsDatabase => {
+
+  // remove any tweets that are already in the container
   $('#tweets-container').empty();
 
+  // turn each tweet in database into an html element, and append them to container
   for (const tweet of tweetsDatabase) {
     $('#tweets-container').append(createTweetElement(tweet));
   }

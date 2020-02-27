@@ -89,12 +89,13 @@ $(document).ready(() => {
       $.ajax('/tweets', {
         data: $(this).serialize(),
         method: 'POST',
-        success: () => loadTweets(),
+        success: () => {
+          loadTweets();
+          $textArea.val(''); // clear textarea
+          $('.counter').text('140'); // reset counter to 140
+        }, 
         error: (data, text, error) => console.error(error)
       })
-
-      // clear textarea
-      $textArea.val('');
     }
   })
 

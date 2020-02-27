@@ -6,14 +6,10 @@
   top: 120px;
   background-color: rgba(0, 121, 140, 0.678);
   background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
-}
-
-/* Avatar image */
-.profile img {
-  display: inline-block;
-  position: relative;
-  left: 42vw;
-  top: 60px
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Name */
@@ -21,8 +17,6 @@
   display: inline-block;
   width: 256px;
   text-align: center;
-  position: relative;
-  left: 42vw;
-  top: 15px;
+  margin: 0;
   color: azure;
 }

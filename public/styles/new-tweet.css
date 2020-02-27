@@ -1,3 +1,8 @@
+/* Tweet form */
+.new-tweet form {
+  margin-bottom: 60px;
+}
+
 /* Text input field */
 .new-tweet textarea {
   width: 100%;

@@ -58,3 +58,22 @@ body {
    font-size: 1.5em;
    color: white;
  }
+
+
+ /* 
+  * Responsive layout
+  */
+
+  /* For desktops/laptops */
+  @media only screen and (min-width: 1024px) {
+
+    .profile {
+      width: 45%;
+      float: left;
+    }
+
+    main {
+      width: 55%;
+      float: right;
+    }
+  }

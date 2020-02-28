@@ -54,7 +54,7 @@ This will open the tweet field. Simply write your thoughts and click tweet. You 
 
 For desktops and laptops (over 1024px), your profile will appear on the left, and tweets on the right.
 
-For smaller device like mobile, they will be stacked on top of each other, profile being on top and tweets bottom.
+For smaller devices like mobile, sections will be stacked on top of each other, profile being on top and tweets bottom.
 
 ## Features
 

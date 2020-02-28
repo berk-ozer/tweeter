@@ -86,7 +86,7 @@ $(document).ready(() => {
 
     const $errorMessage = $(this).children('h4');
     const $textArea = $(this).children('textarea');
-    const inputText = $textArea.val();
+    const inputText = $textArea.val().trim();
 
     // hide error message in case it's in display
     $errorMessage.hide();

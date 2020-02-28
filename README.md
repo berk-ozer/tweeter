@@ -8,11 +8,13 @@ Make sure to stay under 140 characters, and you'll be just fine.
 
 ## Final Product
 
-!["a"](a)
+!["Tweeter on desktop"](https://github.com/berk-ozer/tweeter/blob/master/docs/desktop-screen.png?raw=true)
 
-!["a"](a)
+!["Tweetering on mobile"](https://github.com/berk-ozer/tweeter/blob/master/docs/tweeting-on-mobile.png?raw=true)
 
-!["a"](a)
+!["Timeline on mobile"](https://github.com/berk-ozer/tweeter/blob/master/docs/tweets-timeline.png?raw=true)
+
+!["Too long tweet error"](https://github.com/berk-ozer/tweeter/blob/master/docs/tweet-too-long.png?raw=true)
 
 ## Dependencies
 

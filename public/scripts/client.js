@@ -1,5 +1,7 @@
 //
+//
 // FUNCTIONS
+//
 //
 
 // Escapes unsafe characters and returns safe html. To prevent XSS
@@ -51,11 +53,26 @@ const renderTweets = tweetsDatabase => {
   }
 };
 
+// gets tweets from the server and renders them on the page
+const loadTweets = () => {
+  $.ajax('/tweets', {
+    method: 'GET',
+    dataType: 'JSON',
+    success: tweets => renderTweets(tweets),
+    error: (data, text, error) => console.error(error)
+  });
+};
+
+//
 //
 // WHEN DOM IS READY
 //
+//
 
 $(document).ready(() => {
+
+  // load all tweets when page is loaded
+  loadTweets();
 
   // shows/hides new tweet section when clicked the arrow icon on navbar
   $('nav i').on('click', () => {
@@ -98,17 +115,4 @@ $(document).ready(() => {
       });
     }
   });
-
-  // GET tweets from the server and render them on the page
-  const loadTweets = () => {
-    $.ajax('/tweets', {
-      method: 'GET',
-      dataType: 'JSON',
-      success: tweets => renderTweets(tweets),
-      error: (data, text, error) => console.error(error)
-    });
-  };
-
-  // TESTING
-  loadTweets();
 });
